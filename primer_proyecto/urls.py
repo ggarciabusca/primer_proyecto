@@ -25,5 +25,6 @@ urlpatterns = [
     path("edad/<edad>/",anio_nacido),
     path("plantilla/",vista_plantilla),
     path("listado/",vista_listado_alumnos),
-    path("coder/", include("aplicacion1.urls"))
+    path("aplicacion1/", include("aplicacion1.urls")),
+    
 ]

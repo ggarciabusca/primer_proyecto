@@ -1,0 +1,23 @@
+{% extends "aplicacion1/base.html" %}
+
+{% block contenido %}
+
+<h1>Cursos</h1>
+
+<p> Aca vamos a poner contenido para los cursos</p>
+
+{% if listado_cursos %}
+    <ul>
+        {% for curso in listado_cursos %}
+            {{curso}}
+
+        {% endfor %}
+
+
+    </ul>
+{% else %}
+{% endif %}
+
+<a href="{% url 'inicio'%}"> Ir a inicio </a>
+
+{% endblock %}
