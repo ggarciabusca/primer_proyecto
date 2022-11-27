@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from primer_proyecto.views import *
+import primer_proyecto.settings as settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,3 +30,6 @@ urlpatterns = [
     path("aplicacion1/", include("aplicacion1.urls")),
     
 ]
+
+#agregar las url de archivos estáticos
+urlpatterns += static(prefix=settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
